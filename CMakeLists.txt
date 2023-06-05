@@ -1,13 +1,34 @@
-cmake_minimum_required(VERSION 3.25 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5)
 
-project(test
-    VERSION         0.0.1
-    DESCRIPTION     "exercise cmake study"
-    LANGUAGES       CXX
+project(cmake_test)
+
+############################################################
+# Create a library
+############################################################
+
+#Generate the static library from the library sources
+
+add_library(algo_library STATIC 
+    src/algo/bubbleSort.cpp
 )
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+target_include_directories(algo_library
+    PUBLIC 
+        ${PROJECT_SOURCE_DIR}/include
+)
 
-add_subdirectory(src)
 
+############################################################
+# Create an executable
+############################################################
+
+# Add an executable with the above sources
+add_executable(main 
+    src/main.cpp
+)
+
+# link the new hello_library target with the hello_binary target
+target_link_libraries( main
+    PRIVATE 
+        algo_library
+)

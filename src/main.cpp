@@ -1,6 +1,17 @@
+#include "static/algo.h"
 #include <iostream>
 
-int main(int argc, const char *argv[])
+int main(int argc, char *argv[])
 {
-    std::cout << "Hello C++ " << __cplusplus << std::endl;
+    int arr1[5] = {5, 4, 3, 2, 1};
+    for(const auto &element : arr1)
+    {
+        std::cout << "there is elemnt in arr1 before sort "<< element << std::endl;
+    }
+    bubbleSort(arr1, 5);
+    for(const auto &element : arr1)
+    {
+        std::cout << "there is elemnt in arr1 "<< element << std::endl;
+    }
+    return 0;
 }
