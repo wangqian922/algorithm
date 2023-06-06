@@ -1,17 +1,22 @@
 #include "static/algo.h"
+#include "static/DataStructures.h"
 #include <iostream>
 
 int main(int argc, char *argv[])
 {
-    int arr1[5] = {5, 4, 3, 2, 1};
-    for(const auto &element : arr1)
-    {
-        std::cout << "there is elemnt in arr1 before sort "<< element << std::endl;
-    }
-    bubbleSort(arr1, 5);
-    for(const auto &element : arr1)
-    {
-        std::cout << "there is elemnt in arr1 "<< element << std::endl;
-    }
+    // 顺序栈
+    // sqStack *p = new sqStack();
+
+    // p->sqPush(2);
+    // p->sqPush(3);
+    // p->sqPush(4);
+    // p->traverse();
+    // std::cout << "IS EMPTY " << p->isEmpty() << std::endl;
+    // std::cout << "pop out " << p->sqPop() << std::endl;
+    // std::cout << "pop out " << p->sqPop() << std::endl;
+    // std::cout << "pop out " << p->sqPop() << std::endl;
+    // std::cout << "IS EMPTY " << p->isEmpty() << std::endl;
+
+    // delete p;
     return 0;
 }

@@ -17,6 +17,15 @@ target_include_directories(algo_library
         ${PROJECT_SOURCE_DIR}/include
 )
 
+add_library(data_structure_library STATIC 
+    src/dataStructure/sqStack.cpp
+)
+
+target_include_directories(data_structure_library
+    PUBLIC 
+        ${PROJECT_SOURCE_DIR}/include
+)
+
 
 ############################################################
 # Create an executable
@@ -31,4 +40,5 @@ add_executable(main
 target_link_libraries( main
     PRIVATE 
         algo_library
+        data_structure_library
 )
