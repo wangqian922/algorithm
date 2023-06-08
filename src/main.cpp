@@ -4,19 +4,11 @@
 
 int main(int argc, char *argv[])
 {
-    // 顺序栈
-    // sqStack *p = new sqStack();
-
-    // p->sqPush(2);
-    // p->sqPush(3);
-    // p->sqPush(4);
-    // p->traverse();
-    // std::cout << "IS EMPTY " << p->isEmpty() << std::endl;
-    // std::cout << "pop out " << p->sqPop() << std::endl;
-    // std::cout << "pop out " << p->sqPop() << std::endl;
-    // std::cout << "pop out " << p->sqPop() << std::endl;
-    // std::cout << "IS EMPTY " << p->isEmpty() << std::endl;
-
-    // delete p;
+    int arr[5] = {5, 4, 3, 2, 1};
+    bubbleSort(arr, 5);
+    for(const auto &var : arr)
+    {
+        std::cout << "element is " << var << std::endl;
+    }
     return 0;
 }

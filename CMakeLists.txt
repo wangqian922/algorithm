@@ -9,7 +9,7 @@ project(cmake_test)
 #Generate the static library from the library sources
 
 add_library(algo_library STATIC 
-    src/algo/bubbleSort.cpp
+    src/algo/sort.cpp
 )
 
 target_include_directories(algo_library
