@@ -4,8 +4,8 @@
 
 int main(int argc, char *argv[])
 {
-    int arr[5] = {5, 4, 3, 2, 1};
-    bubbleSort(arr, 5);
+    int arr[7] = {5, 4, 3, 6, 9, 2, 1};
+    insertSort(arr, 7);
     for(const auto &var : arr)
     {
         std::cout << "element is " << var << std::endl;
