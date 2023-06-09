@@ -26,6 +26,15 @@ target_include_directories(data_structure_library
         ${PROJECT_SOURCE_DIR}/include
 )
 
+add_library(Common_Utils_library STATIC 
+    src/CommonUtils/util.cpp
+)
+
+target_include_directories(Common_Utils_library
+    PUBLIC 
+        ${PROJECT_SOURCE_DIR}/include
+)
+
 
 ############################################################
 # Create an executable

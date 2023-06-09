@@ -4,4 +4,5 @@
 void bubbleSort(int arr[], int size);
 void seleSort(int arr[], int size);
 void insertSort(int arr[], int size);
+void quickSort(int arr[], int size)
 #endif
