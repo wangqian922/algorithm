@@ -33,7 +33,7 @@ void seleSort(int arr[], int size)
 
 void insertSort(int arr[], int size)
 {
-    
+
     for (int i = 1; i < size; i++)
     {
         int sorted = arr[i];
@@ -47,7 +47,30 @@ void insertSort(int arr[], int size)
     }
 }
 
-void quickSort(int arr[], int size)
+int *findBase(int arr[], int *low, int *high)
 {
+    int base = *low;
+    while (low < high)
+    {
+        while (low < high && *high >= base)
+            high--;
+        *low = *high;
 
+        while (low < high && *low <= base)
+            low++;
+        *high = *low;
+    }
+
+    *low = base;
+    return low;
+}
+
+void quickSort(int arr[], int *low, int *high)
+{
+    if (low < high)
+    {
+        int *base = findBase(arr, low, high);
+        quickSort(arr, low, base - 1);
+        quickSort(arr, base + 1, high);
+    }
 }
