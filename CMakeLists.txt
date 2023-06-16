@@ -19,6 +19,9 @@ target_include_directories(algo_library
 
 add_library(data_structure_library STATIC 
     src/dataStructure/sqStack.cpp
+    src/dataStructure/linkedList.cpp
+    src/dataStructure/tree.cpp
+    src/dataStructure/binaryTree.cpp
 )
 
 target_include_directories(data_structure_library
@@ -26,11 +29,11 @@ target_include_directories(data_structure_library
         ${PROJECT_SOURCE_DIR}/include
 )
 
-add_library(Common_Utils_library STATIC 
+add_library(common_utils_library STATIC 
     src/CommonUtils/util.cpp
 )
 
-target_include_directories(Common_Utils_library
+target_include_directories(common_utils_library
     PUBLIC 
         ${PROJECT_SOURCE_DIR}/include
 )
@@ -50,4 +53,5 @@ target_link_libraries( main
     PRIVATE 
         algo_library
         data_structure_library
+        common_utils_library
 )

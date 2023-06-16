@@ -49,5 +49,5 @@ void insertSort(int arr[], int size)
 
 void quickSort(int arr[], int size)
 {
-
+    std::cout << "quickSort wait for code!!!" << std::endl;
 }

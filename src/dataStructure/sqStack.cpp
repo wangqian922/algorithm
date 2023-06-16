@@ -1,4 +1,3 @@
-#include <iostream>
 #include "static/DataStructures.h"
 
 sqStack::sqStack() 

@@ -4,11 +4,15 @@
 
 int main(int argc, char *argv[])
 {
-    int arr[7] = {5, 4, 3, 6, 9, 2, 1};
-    insertSort(arr, 7);
-    for(const auto &var : arr)
-    {
-        std::cout << "element is " << var << std::endl;
-    }
-    return 0;
+    std::shared_ptr<BinaryTree> binTree = std::make_shared<BinaryTree>();
+    binTree->root = std::make_shared<BinaryTreeNode>(1);
+    binTree->root->left = std::make_shared<BinaryTreeNode>(2);
+    binTree->root->right = std::make_shared<BinaryTreeNode>(3);
+    binTree->root->left->right = std::make_shared<BinaryTreeNode>(4);
+    binTree->root->right->left = std::make_shared<BinaryTreeNode>(5);
+    binTree->root->right->right = std::make_shared<BinaryTreeNode>(6);
+
+    // BinaryTree::preorderTraverse(binTree->root);
+    // BinaryTree::ineorderTraverse(binTree->root);
+    BinaryTree::posteorderTraverse(binTree->root);
 }
