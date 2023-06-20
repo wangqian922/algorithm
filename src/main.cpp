@@ -12,7 +12,5 @@ int main(int argc, char *argv[])
     binTree->root->right->left = std::make_shared<BinaryTreeNode>(5);
     binTree->root->right->right = std::make_shared<BinaryTreeNode>(6);
 
-    // BinaryTree::preorderTraverse(binTree->root);
-    // BinaryTree::ineorderTraverse(binTree->root);
-    BinaryTree::posteorderTraverse(binTree->root);
+    BinaryTree::ineorderTraverse(binTree->root);
 }

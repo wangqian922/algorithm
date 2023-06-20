@@ -17,22 +17,22 @@ void BinaryTree::ineorderTraverse(std::shared_ptr<BinaryTreeNode> root)
     std::shared_ptr<BinaryTreeNode> cur = root;
 
     if (root->left != nullptr)
-        preorderTraverse(root->left);
+        ineorderTraverse(root->left);
 
     std::cout << "value is " << root->value << std::endl;
 
     if (root->right != nullptr)
-        preorderTraverse(root->right);
+        ineorderTraverse(root->right);
 }
 
 void BinaryTree::posteorderTraverse(std::shared_ptr<BinaryTreeNode> root)
 {
     std::shared_ptr<BinaryTreeNode> cur = root;
     if (root->left != nullptr)
-        preorderTraverse(root->left);
+        posteorderTraverse(root->left);
 
     if (root->right != nullptr)
-        preorderTraverse(root->right);
+        posteorderTraverse(root->right);
 
     std::cout << "value is " << root->value << std::endl;
 }

@@ -22,6 +22,7 @@ add_library(data_structure_library STATIC
     src/dataStructure/linkedList.cpp
     src/dataStructure/tree.cpp
     src/dataStructure/binaryTree.cpp
+    src/dataStructure/queue.cpp
 )
 
 target_include_directories(data_structure_library

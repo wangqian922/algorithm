@@ -50,6 +50,17 @@ public:
     elemType serachValue(unsigned index);
 };
 
+class Queue
+{
+public:
+    Queue();
+
+    void Enqueue(elemType value);
+    elemType Dequeue();
+    int getSize();
+    bool isEmpty();
+};
+
 class treeNode
 {
 public:
@@ -87,6 +98,12 @@ public:
     static void preorderTraverse(std::shared_ptr<BinaryTreeNode> root);
     static void ineorderTraverse(std::shared_ptr<BinaryTreeNode> root);
     static void posteorderTraverse(std::shared_ptr<BinaryTreeNode> root);    
+};
+
+class heap
+{
+public:
+    heap(/* args */);
 };
 
 #endif
