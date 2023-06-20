@@ -6,14 +6,6 @@
 #include <memory>
 
 typedef int elemType;
-class Node
-{
-public:
-    elemType value;
-    Node *next;
-
-    Node(elemType value) : value(value), next(nullptr){};
-};
 
 class sqStack
 {
@@ -27,6 +19,15 @@ public:
     void sqPush(elemType elem);
     elemType sqPop();
     bool isEmpty();
+};
+
+class Node
+{
+public:
+    elemType value;
+    Node *next;
+
+    Node(elemType value) : value(value), next(nullptr){};
 };
 
 class Linkedlist
@@ -50,10 +51,16 @@ public:
     elemType serachValue(unsigned index);
 };
 
-class Queue
+class LinkedQueue : Linkedlist
 {
 public:
-    Queue();
+    Node *front;
+    Node *rear;
+
+    LinkedQueue()
+    {
+        front = rear = header;
+    }
 
     void Enqueue(elemType value);
     elemType Dequeue();
@@ -105,5 +112,8 @@ class heap
 public:
     heap(/* args */);
 };
+
+void testBinaryTree();
+void testQueue();
 
 #endif
